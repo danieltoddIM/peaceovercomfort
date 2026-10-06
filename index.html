@@ -76,7 +76,9 @@
     border: 1px solid var(--line); border-radius: 999px;
     font-size: 13px; color: var(--muted);
   }
-  footer { margin-top: 56px; font-size: 12px; color: var(--muted); }
+  footer { margin-top: 56px; font-size: 12px; color: var(--muted); display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  footer a { color: var(--muted); }
+  footer a:hover { color: var(--ember); }
 </style>
 </head>
 <body>
@@ -94,7 +96,7 @@
   <p class="lede">This book is about a different kind of peace. The kind you can have while you are still standing in the fire, because Jesus is standing in it with you.</p>
   <div class="author">By <strong>Daniel Todd</strong></div>
   <div class="status">Coming soon from Game Changer Publishing</div>
-  <footer>&copy; 2026 Daniel Todd</footer>
+  <footer><span>&copy; 2026 Daniel Todd</span><a href="/qr-code">Get the QR code</a></footer>
 </main>
 </body>
 </html>
