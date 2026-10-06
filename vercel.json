@@ -1,5 +1,5 @@
 {
   "redirects": [
-    { "source": "/qr", "destination": "/?src=qr", "permanent": false }
+    { "source": "/qr", "destination": "/welcome", "permanent": false }
   ]
 }
