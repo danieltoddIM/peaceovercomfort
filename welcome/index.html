@@ -5,19 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Thanks for Scanning | Peace Over Comfort</title>
 <meta name="robots" content="noindex">
-<meta name="description" content="Peace Over Comfort: Why Comfort Fails, Why Crisis Reveals, and How God Meets You in the Fire. A new book by Daniel Todd. Coming soon from Game Changer Publishing.">
-<meta property="og:title" content="Peace Over Comfort">
-<meta property="og:description" content="Why Comfort Fails, Why Crisis Reveals, and How God Meets You in the Fire. A new book by Daniel Todd. Coming soon.">
+<meta name="description" content="Reader bonuses for Peace Over Comfort by Daniel Todd: the songs written alongside the book, and more.">
+<meta property="og:title" content="Peace Over Comfort: Reader Bonuses">
+<meta property="og:description" content="The songs written alongside the book, and more for readers of Peace Over Comfort.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
+  /* Layout: one quiet centered column; the song list is the only dense element, set like a liner-notes track list. */
   :root {
     --bg: #faf6f0;
     --ink: #2a2420;
     --muted: #6b5f55;
     --ember: #b5532a;
     --line: #e4d9cc;
+    --raise: #f3ece2;
+    --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    --sans: "Inter", system-ui, -apple-system, sans-serif;
   }
   @media (prefers-color-scheme: dark) {
     :root {
@@ -26,79 +30,179 @@
       --muted: #b3a597;
       --ember: #e0814f;
       --line: #3a302a;
+      --raise: #231c18;
+      color-scheme: dark;
     }
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { height: 100%; }
   body {
     background: var(--bg);
     color: var(--ink);
-    font-family: "Inter", system-ui, sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 48px 20px;
-    min-height: 100vh;
+    font-family: var(--sans);
+    padding-inline: 20px;
+    padding-block: 56px 48px;
+    -webkit-font-smoothing: antialiased;
   }
-  main { max-width: 560px; text-align: center; }
-  .flame {
-    width: 28px; height: 40px; margin: 0 auto 28px;
-    color: var(--ember);
-  }
+  main { max-width: 600px; margin: 0 auto; }
+  .head { text-align: center; }
+  .flame { width: 28px; height: 40px; margin: 0 auto 24px; color: var(--ember); display: block; }
   .eyebrow {
     font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--muted); margin-bottom: 18px;
+    color: var(--muted); margin-bottom: 16px;
   }
   h1 {
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-weight: 600;
-    font-size: clamp(44px, 10vw, 72px);
-    line-height: 1.02;
-    letter-spacing: -0.01em;
+    font-family: var(--serif); font-weight: 600;
+    font-size: clamp(42px, 10vw, 64px); line-height: 1.02; letter-spacing: -0.01em;
+    text-wrap: balance;
   }
   .subtitle {
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-style: italic;
-    font-size: clamp(19px, 4.2vw, 24px);
-    line-height: 1.35;
-    color: var(--muted);
-    margin-top: 14px;
+    font-family: var(--serif); font-style: italic;
+    font-size: clamp(18px, 4.2vw, 22px); line-height: 1.35;
+    color: var(--muted); margin-top: 12px; text-wrap: balance;
   }
-  .rule { width: 48px; height: 1px; background: var(--ember); margin: 36px auto; }
-  p.lede { font-size: 17px; line-height: 1.7; color: var(--ink); }
-  p.lede + p.lede { margin-top: 16px; }
-  p.thanks { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: 22px; color: var(--ember); }
-  .author {
-    margin-top: 40px; font-size: 14px; letter-spacing: 0.08em;
-    text-transform: uppercase; color: var(--muted);
+  .thanks {
+    font-family: var(--serif); font-style: italic; font-size: 22px;
+    color: var(--ember); margin-top: 32px;
   }
-  .author strong { color: var(--ink); font-weight: 500; }
-  .status {
-    display: inline-block; margin-top: 28px; padding: 8px 18px;
-    border: 1px solid var(--line); border-radius: 999px;
-    font-size: 13px; color: var(--muted);
+  .rule { width: 48px; height: 1px; background: var(--ember); margin: 40px auto; border: 0; }
+
+  section + section { margin-top: 56px; }
+  .label {
+    font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--muted); font-weight: 500;
   }
-  footer { margin-top: 56px; font-size: 12px; color: var(--muted); display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  h2 {
+    font-family: var(--serif); font-weight: 600; font-size: 34px; line-height: 1.1;
+    margin-top: 8px;
+  }
+  .intro { font-size: 16px; line-height: 1.7; margin-top: 14px; max-width: 62ch; }
+
+  .play-all {
+    display: inline-flex; align-items: center; gap: 10px;
+    margin-top: 22px; padding: 12px 20px; border-radius: 999px;
+    background: var(--ember); color: #fff; text-decoration: none;
+    font-size: 14px; font-weight: 500;
+  }
+  .play-all:hover, .play-all:focus-visible { filter: brightness(1.08); outline: none; }
+  .play-all:focus-visible { box-shadow: 0 0 0 3px var(--bg), 0 0 0 5px var(--ember); }
+  .play-all svg { width: 14px; height: 14px; }
+
+  ol.tracks { list-style: none; margin-top: 28px; border-top: 1px solid var(--line); counter-reset: t; }
+  ol.tracks li { border-bottom: 1px solid var(--line); counter-increment: t; }
+  ol.tracks a {
+    display: grid; grid-template-columns: 2.2em 1fr auto; gap: 4px 12px; align-items: baseline;
+    padding: 14px 6px; color: inherit; text-decoration: none; border-radius: 4px;
+  }
+  ol.tracks a:hover, ol.tracks a:focus-visible { background: var(--raise); outline: none; }
+  ol.tracks a:focus-visible { box-shadow: inset 0 0 0 2px var(--ember); }
+  ol.tracks a::before {
+    content: counter(t, decimal-leading-zero);
+    font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums;
+    grid-row: 1 / span 2;
+  }
+  .t-title { font-family: var(--serif); font-size: 22px; font-weight: 600; line-height: 1.2; min-width: 0; }
+  .t-verse { font-size: 13px; color: var(--ember); grid-column: 2; }
+  .t-style { font-size: 12px; color: var(--muted); grid-column: 3; grid-row: 1; text-align: right; white-space: nowrap; }
+  .t-listen { font-size: 12px; color: var(--muted); grid-column: 3; grid-row: 2; text-align: right; }
+  ol.tracks a:hover .t-listen { color: var(--ember); }
+  @media (max-width: 420px) {
+    ol.tracks a { grid-template-columns: 2em 1fr; }
+    .t-style { grid-column: 2; grid-row: auto; text-align: left; }
+    .t-listen { display: none; }
+  }
+
+  .coming { display: grid; gap: 12px; margin-top: 20px; }
+  .coming div {
+    border: 1px dashed var(--line); border-radius: 6px; padding: 16px 18px;
+  }
+  .coming strong { font-family: var(--serif); font-size: 20px; font-weight: 600; display: block; }
+  .coming span { font-size: 14px; color: var(--muted); line-height: 1.55; display: block; margin-top: 4px; }
+
+  footer {
+    margin-top: 64px; font-size: 12px; color: var(--muted);
+    display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+  }
   footer a { color: var(--muted); }
   footer a:hover { color: var(--ember); }
+  @media (prefers-reduced-motion: no-preference) {
+    ol.tracks a { transition: background-color .15s ease; }
+  }
 </style>
 </head>
 <body>
 <main>
-  <svg class="flame" viewBox="0 0 28 40" fill="none" aria-hidden="true">
-    <path d="M14 2c1.5 6-6 10-6 18a6 6 0 0 0 12 0c0-3-1.5-5-3-7 0 3-1.5 4.5-3 5 1-4-1-9 0-16Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-    <path d="M14 38c6.6 0 12-4.5 12-11 0-5-2.5-8.5-5-11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-    <path d="M14 38C7.4 38 2 33.5 2 27c0-4 1.5-7 3.5-9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-  </svg>
-  <div class="eyebrow">Thanks for scanning</div>
-  <h1>Peace Over Comfort</h1>
-  <div class="subtitle">Why Comfort Fails, Why Crisis Reveals, and How God Meets You in the Fire</div>
-  <div class="rule"></div>
-  <p class="lede thanks">I'm glad you're here.</p>
-  <p class="lede">Most of us believe peace comes after the problem is solved. After the bank says yes. After the diagnosis. After things calm down.</p>
-  <p class="lede">This book is about a different kind of peace. The kind you can have while you are still standing in the fire, because Jesus is standing in it with you.</p>
-  <div class="author">By <strong>Daniel Todd</strong></div>
-  <div class="status">Coming soon from Game Changer Publishing</div>
+  <div class="head">
+    <svg class="flame" viewBox="0 0 28 40" fill="none" aria-hidden="true">
+      <path d="M14 2c1.5 6-6 10-6 18a6 6 0 0 0 12 0c0-3-1.5-5-3-7 0 3-1.5 4.5-3 5 1-4-1-9 0-16Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+      <path d="M14 38c6.6 0 12-4.5 12-11 0-5-2.5-8.5-5-11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M14 38C7.4 38 2 33.5 2 27c0-4 1.5-7 3.5-9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
+    <div class="eyebrow">Thanks for scanning</div>
+    <h1>Peace Over Comfort</h1>
+    <div class="subtitle">Why Comfort Fails, Why Crisis Reveals, and How God Meets You in the Fire</div>
+    <p class="thanks">I'm glad you're here. These are for you.</p>
+  </div>
+
+  <hr class="rule">
+
+  <section aria-labelledby="music">
+    <div class="label">Music</div>
+    <h2 id="music">Upbeat in the Fire</h2>
+    <p class="intro">These are songs I wrote and kept on repeat while I was writing this book. Most of them started with a verse I was reading that morning. Some are for the gym, some are for the drive, and a few are for the hard mornings.</p>
+    <a class="play-all" href="https://suno.com/s/Gbkmc1MdKqGqJqWX" target="_blank" rel="noopener">
+      <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1.5v11l9-5.5z" fill="currentColor"/></svg>
+      Play the whole playlist
+    </a>
+
+    <ol class="tracks">
+      <li><a href="https://suno.com/song/3ca75e36-10ac-444f-903a-aeb7d2554d9b" target="_blank" rel="noopener">
+        <span class="t-title">Do Not Fear</span><span class="t-style">Gospel</span>
+        <span class="t-verse">Mark 4:35–41</span><span class="t-listen">Listen</span></a></li>
+      <li><a href="https://suno.com/song/85b9533e-5bee-4778-a21a-6e2fe4382332" target="_blank" rel="noopener">
+        <span class="t-title">You Make a Way</span><span class="t-style">K-Pop</span>
+        <span class="t-verse">Isaiah 43:19</span><span class="t-listen">Listen</span></a></li>
+      <li><a href="https://suno.com/song/2e195056-b85a-4594-a99c-4ce3d2ac5e51" target="_blank" rel="noopener">
+        <span class="t-title">Peace Beyond Reason</span><span class="t-style">Dubstep</span>
+        <span class="t-verse">Philippians 4:6–7</span><span class="t-listen">Listen</span></a></li>
+      <li><a href="https://suno.com/song/135d4330-1852-4353-9260-b09166aaa014" target="_blank" rel="noopener">
+        <span class="t-title">Made To Move</span><span class="t-style">Alternative Rock</span>
+        <span class="t-verse">James 2:14–18</span><span class="t-listen">Listen</span></a></li>
+      <li><a href="https://suno.com/song/eeddbf4e-ab24-4798-8f3c-d67e2b208b4d" target="_blank" rel="noopener">
+        <span class="t-title">Carry the Fire Together</span><span class="t-style">Modern Worship</span>
+        <span class="t-verse">Hebrews 10:23–25</span><span class="t-listen">Listen</span></a></li>
+      <li><a href="https://suno.com/song/a73bd327-7994-4faf-a9c1-6aa130ecd474" target="_blank" rel="noopener">
+        <span class="t-title">Hope Has the Final Word</span><span class="t-style">80s Anthemic Rock</span>
+        <span class="t-verse">Ephesians 6:10–12 · Daniel 10:12–13</span><span class="t-listen">Listen</span></a></li>
+      <li><a href="https://suno.com/song/b8f7b56c-db50-4db5-aa68-c51f17afb18c" target="_blank" rel="noopener">
+        <span class="t-title">Steady in You</span><span class="t-style">Electro Gospel</span>
+        <span class="t-verse">Psalm 112:7–8</span><span class="t-listen">Listen</span></a></li>
+      <li><a href="https://suno.com/song/fd4e2457-9e3c-4acb-be8e-94bd83a6aed3" target="_blank" rel="noopener">
+        <span class="t-title">Count It All Joy</span><span class="t-style">Funk</span>
+        <span class="t-verse">James 1:2–5</span><span class="t-listen">Listen</span></a></li>
+      <li><a href="https://suno.com/song/ed74b154-33e4-49f6-8b89-a8080db09bc4" target="_blank" rel="noopener">
+        <span class="t-title">Higher Than Mine</span><span class="t-style">Pop Rock</span>
+        <span class="t-verse">Isaiah 55:8–11</span><span class="t-listen">Listen</span></a></li>
+      <li><a href="https://suno.com/song/530a8d7d-2c5a-4c0f-8d76-5b525298b504" target="_blank" rel="noopener">
+        <span class="t-title">You Establish My Steps</span><span class="t-style">Reggae</span>
+        <span class="t-verse">Proverbs 16:9</span><span class="t-listen">Listen</span></a></li>
+      <li><a href="https://suno.com/song/4fa06794-9016-4466-a662-7387f6ba48dd" target="_blank" rel="noopener">
+        <span class="t-title">Cup of Salvation</span><span class="t-style">Electro Gospel</span>
+        <span class="t-verse">Psalm 116</span><span class="t-listen">Listen</span></a></li>
+      <li><a href="https://suno.com/song/e10ba554-ff17-4493-a374-049ea6dc55ac" target="_blank" rel="noopener">
+        <span class="t-title">Treasure in the Dust</span><span class="t-style">80s Worship Anthem</span>
+        <span class="t-verse">Psalm 119</span><span class="t-listen">Listen</span></a></li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="coming">
+    <div class="label">Coming soon</div>
+    <h2 id="coming">More for readers</h2>
+    <div class="coming">
+      <div><strong>Small group guide</strong><span>Six sessions for walking through the book with a few friends, your small group, or your church.</span></div>
+      <div><strong>The 6 a.m. verses</strong><span>The verses I say out loud most mornings, as a lock screen and a printable card.</span></div>
+    </div>
+  </section>
+
   <footer><span>&copy; 2026 Daniel Todd</span><a href="/">peaceovercomfort.com</a></footer>
 </main>
 </body>
