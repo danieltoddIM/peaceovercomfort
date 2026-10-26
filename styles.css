@@ -425,11 +425,36 @@ body.theme-five {
 .site-nav nav a:hover::after { width: 100%; }
 .production-site .hero { min-height: 100svh; padding-top: 118px; }
 .production-site .cover-label { display: none; }
-.production-site .book-stage { padding-bottom: 12px; }
+.production-site .book-stage {
+  display: grid;
+  width: auto;
+  min-width: 0;
+  max-width: none;
+  place-items: center;
+  padding-bottom: 12px;
+}
+.production-site .book-cover {
+  width: auto;
+  height: min(62svh, 650px);
+  max-width: none;
+  aspect-ratio: 2 / 3;
+  object-fit: contain;
+  transform: none;
+  transform-origin: center;
+}
+.production-site .book-cover:hover {
+  transform: translateY(-6px);
+}
 
 @media (max-width: 620px) {
   .site-nav { padding: 18px 20px; }
   .site-brand > span:last-child { display: none; }
   .site-nav nav { gap: 18px; }
   .production-site .hero { padding-top: 112px; }
+  .production-site .book-stage { width: min(78vw, 350px); }
+  .production-site .book-cover {
+    width: 100%;
+    height: auto;
+    max-height: none;
+  }
 }
