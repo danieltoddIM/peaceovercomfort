@@ -1,58 +1,33 @@
-PEACE OVER COMFORT — COMPLETE SITE REDESIGN
+PEACE OVER COMFORT — VOTING REPAIR
 
-FILES IN THIS PACKAGE
-- index.html
-- styles.css
-- assets/brand.css
-- assets/cover-1.webp
-- covers/index.html (preserved Round One voting and API behavior)
-- covers/design-review/index.html (preserved Round One results and comments)
-- covers/cover-assets/cover-1.webp through cover-16.webp
-- covers/round-two/index.html
-- covers/round-two/vote.css
-- covers/round-two/vote.js
-- covers/round-two/assets/cover-1.webp
-- covers/round-two/assets/cover-5.webp
-- covers/round-two/assets/cover-6.webp
-- qr-code/index.html
-- qr-code/peaceovercomfort-qr.svg
-- qr-code/peaceovercomfort-qr.png
-- welcome/index.html
-- vercel.json
+No Redis account or new Vercel environment variables are required.
+The existing hosted voting service has a separate Round Two API/table.
+Round One records and its original API are unchanged.
 
-HOW TO USE THIS IN THE EXISTING VERCEL PROJECT
-1. Copy the full contents of this package into the existing project, preserving
-   any serverless API files that already live under /covers/api.
-2. Do not delete or replace the original Round One API or its stored responses.
-3. Add the separate Round Two endpoint described below.
-4. Commit the changes to the branch connected to Vercel.
-5. Review every route in the Vercel preview before promoting it to Production.
+DEPLOY
+1. Upload the CONTENTS of this folder into the root of the existing GitHub
+   repository. Keep covers/, assets/, qr-code/, welcome/ and vercel.json at
+   their existing locations. Do not upload the enclosing folder as a new path.
+2. Include vercel.json: it reconnects voting to the existing service.
+3. Commit to your Vercel-connected branch and wait for deployment to finish.
+4. Reload /covers/round-two and submit your own real vote with name blank.
+   Check /covers/round-two/design-review for that response.
 
-REDESIGNED ROUTES
-- / — homepage
-- /covers — original Round One vote, retained and restyled
-- /covers/design-review — complete Round One results and comments, retained
-- /covers/round-two — new three-cover final vote
-- /qr-code — QR download and print guidance
-- /qr and /welcome — reader-scanner welcome page and music extras
+If the earlier Redis file api/round-two-votes.js was uploaded, remove that
+obsolete file. This package no longer uses it. Do not delete other API files.
 
-All routes now use the Quiet Editorial Peace Over Comfort wordmark. The P/C
-badge has been removed. The shared design system is in /assets/brand.css.
+ROUTES
+/covers/round-two — choose one of three covers and answer three questions
+/covers/round-two/design-review — Round Two results and anonymous comments
+/covers/design-review — original live Round One review, not a static snapshot
+/covers/results — original protected Round One results
+/covers — original Round One voting page
+/qr-code, /qr, /welcome — existing redesigned QR and welcome pages
 
-The homepage links to these existing paths:
-- /qr-code
-- /covers/round-two
+Name remains optional. Browser IDs allow updates without duplicate votes.
+Do not clear browser storage when retrying a failed submission.
+Only a successful server response shows the saved confirmation. A timeout
+can be retried safely with the same browser ID.
 
-The Round Two voting page POSTs JSON to /covers/api/round-two-votes with round
-set to "round-two", favorite set to 1, 5, or 6, and picks containing that single
-favorite. It also sends whyFavorite, whyNotOthers, pickupReason, a combined
-feedback field, the optional name, and a stable browser voterId.
-
-IMPORTANT: Add a separate Round Two API and data store at
-/covers/api/round-two-votes. Do not repurpose the original /covers/api/votes
-endpoint or its stored responses. This preserves the complete Round One voting
-history and prevents the two result sets from being mixed.
-
-UPDATED VERSION
-The book-cover display is locked to its original 2:3 proportion and capped to
-the available viewport height so it cannot stretch or run off the screen.
+The Vercel frontend still requires the upload above. Backend deployment alone
+does not change the Vercel website's configuration.
