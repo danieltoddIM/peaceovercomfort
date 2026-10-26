@@ -168,7 +168,6 @@ h1 small {
 }
 .primary-action:hover { color: var(--paper); background: var(--ink); }
 .text-action { font-size: 12px; text-underline-offset: 5px; }
-.publisher { margin-top: 30px; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; opacity: .58; }
 
 .book-stage {
   position: relative;
@@ -322,7 +321,6 @@ body.theme-five {
 .theme-five .primary-action { color: #2f1e15; border-color: #f2bd73; background: #f2bd73; }
 .theme-five .primary-action:hover { color: #fff9ed; background: transparent; }
 .theme-five .text-action { color: #fff9ed; }
-.theme-five .publisher { color: #fff9ed; }
 .theme-five .cover-label { color: #fff9ed; }
 .theme-five .vertical-note { color: #fff9ed; }
 .theme-five .hero-atmosphere { display: none; }
