@@ -8,7 +8,7 @@
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Oswald:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #faf6f0;
@@ -81,13 +81,21 @@
   footer { margin-top: 40px; font-size: 13px; color: var(--muted); }
   footer a { color: var(--ember); }
 </style>
+<link rel="stylesheet" href="/assets/brand.css">
 </head>
-<body>
+<body class="poc-subpage qr-page">
+<nav class="poc-global-nav" aria-label="Primary navigation">
+  <a class="poc-wordmark" href="/" aria-label="Peace Over Comfort home"><strong>Peace</strong><i></i><small>Over Comfort</small></a>
+  <div class="poc-nav-links"><a href="/covers/round-two">Round Two voting</a><a href="/welcome">Reader extras</a></div>
+</nav>
 <main>
+  <section class="qr-intro">
   <div class="eyebrow">Peace Over Comfort</div>
   <h1>Book QR Code</h1>
   <p class="lede">Use this code anywhere you want people to find the book. It always points to the official Peace Over Comfort page.</p>
+  </section>
 
+  <section class="qr-panel" aria-label="QR code downloads">
   <div class="qr">
     <img src="/qr-code/peaceovercomfort-qr.png" alt="QR code linking to peaceovercomfort.com" width="280" height="280">
   </div>
@@ -103,6 +111,7 @@
       <div class="use">For slides, email, and social posts.</div>
     </a>
   </div>
+  </section>
 
   <div class="notes">
     <h2>Using the code</h2>

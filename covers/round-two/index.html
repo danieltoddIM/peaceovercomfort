@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Round Two: help Daniel Todd choose the final cover for Peace Over Comfort.">
+  <meta name="theme-color" content="#f4efe5">
+  <title>Round Two: Choose the cover | Peace Over Comfort</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Oswald:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vote.css">
+  <link rel="stylesheet" href="/assets/brand.css">
+</head>
+<body>
+  <header class="site-nav">
+    <a class="poc-wordmark" href="/" aria-label="Peace Over Comfort home">
+      <strong>Peace</strong><i></i><small>Over Comfort</small>
+    </a>
+    <div class="round-nav">
+      <a href="/covers/design-review">See Round One results</a>
+      <span class="round-label">Round Two · Final cover vote</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">Round Two · Three refined designs</p>
+      <h1 id="page-title">Which cover would you pick up?</h1>
+      <p class="lede">Your first-round feedback helped narrow and refine the covers. Now the field is down to three updated designs. Look at them as if you saw them for the first time in a bookstore, then choose the one that makes you most curious about the book.</p>
+      <p class="from-daniel">Pick one favorite and tell me what you see. Honest reactions are more helpful than polite ones. <span>— Daniel</span></p>
+      <a class="begin" href="#covers">See the covers <span aria-hidden="true">↓</span></a>
+    </section>
+
+    <form id="vote-form">
+      <section class="cover-section" id="covers" aria-labelledby="covers-title">
+        <div class="section-heading">
+          <div>
+            <p class="step">Round Two · 01 · Compare</p>
+            <h2 id="covers-title">Choose one favorite.</h2>
+          </div>
+          <p>Tap a cover to select it. Tap the image again to see it larger.</p>
+        </div>
+
+        <fieldset class="cover-grid">
+          <legend class="sr-only">Choose your favorite cover</legend>
+
+          <label class="cover-card" data-cover="1">
+            <input type="radio" name="favorite" value="1" required>
+            <span class="cover-image-wrap">
+              <img src="assets/cover-1.webp" alt="Peace Over Comfort cover option 1, a hiker overlooking mountains at sunrise" width="1536" height="2304">
+              <button class="zoom" type="button" data-zoom="1" aria-label="Enlarge cover option 1">View larger ↗</button>
+              <span class="selected-mark">My favorite ✓</span>
+            </span>
+            <span class="cover-meta"><strong>Option 1</strong><span>Select this cover</span></span>
+          </label>
+
+          <label class="cover-card" data-cover="5">
+            <input type="radio" name="favorite" value="5" required>
+            <span class="cover-image-wrap">
+              <img src="assets/cover-5.webp" alt="Peace Over Comfort cover option 5, an editorial painted mountain landscape" width="1536" height="2304">
+              <button class="zoom" type="button" data-zoom="5" aria-label="Enlarge cover option 5">View larger ↗</button>
+              <span class="selected-mark">My favorite ✓</span>
+            </span>
+            <span class="cover-meta"><strong>Option 5</strong><span>Select this cover</span></span>
+          </label>
+
+          <label class="cover-card" data-cover="6">
+            <input type="radio" name="favorite" value="6" required>
+            <span class="cover-image-wrap">
+              <img src="assets/cover-6.webp" alt="Peace Over Comfort cover option 6, a minimal circular brushstroke design" width="1536" height="2304">
+              <button class="zoom" type="button" data-zoom="6" aria-label="Enlarge cover option 6">View larger ↗</button>
+              <span class="selected-mark">My favorite ✓</span>
+            </span>
+            <span class="cover-meta"><strong>Option 6</strong><span>Select this cover</span></span>
+          </label>
+        </fieldset>
+        <p class="selection-status" id="selection-status" aria-live="polite">No favorite selected yet.</p>
+      </section>
+
+      <section class="feedback" id="feedback" aria-labelledby="feedback-title">
+        <div class="section-heading light">
+          <div>
+            <p class="step">02 · Tell me why</p>
+            <h2 id="feedback-title">What influenced your choice?</h2>
+          </div>
+          <p>Short, direct answers are perfect.</p>
+        </div>
+
+        <div class="fields">
+          <label>
+            <span><b>Why did you choose this one?</b><em>What caught your attention or felt right?</em></span>
+            <textarea name="whyFavorite" maxlength="1200" required placeholder="The title is easy to read, the image creates curiosity, it feels hopeful…"></textarea>
+          </label>
+
+          <label>
+            <span><b>Why didn’t you choose the other two?</b><em>What felt distracting, unclear, or less compelling?</em></span>
+            <textarea name="whyNotOthers" maxlength="1200" required placeholder="One felt too busy, the subtitle was harder to notice, the mood felt wrong…"></textarea>
+          </label>
+
+          <label>
+            <span><b>What would make you pick up this book and want to learn more?</b><em>Think about the cover, title, subtitle, imagery, or promise.</em></span>
+            <textarea name="pickupReason" maxlength="1200" required placeholder="I would want to understand how peace is possible before circumstances change…"></textarea>
+          </label>
+
+          <div class="name-row">
+            <label>
+              <span><b>Your name</b><em>Optional</em></span>
+              <input name="name" maxlength="100" autocomplete="name" placeholder="So Daniel knows who to thank">
+            </label>
+            <div class="chosen-summary" id="chosen-summary"><span>Your choice</span><strong>Not selected</strong></div>
+          </div>
+
+          <div class="hp" aria-hidden="true">
+            <label>Website<input name="website" tabindex="-1" autocomplete="off"></label>
+          </div>
+
+          <button class="submit" type="submit">Send my vote and feedback <span aria-hidden="true">→</span></button>
+          <p class="privacy">Your response goes directly to Daniel. Your name and comments are not shown to other voters.</p>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </div>
+      </section>
+    </form>
+
+    <section class="thanks" id="thanks" hidden tabindex="-1">
+      <p class="eyebrow">Vote received</p>
+      <h2>Thank you for helping me choose.</h2>
+      <p id="thanks-copy"></p>
+      <button type="button" id="edit-vote">Update my response</button>
+    </section>
+  </main>
+
+  <footer><span>Peace Over Comfort</span><span>© 2026 Daniel Todd</span></footer>
+
+  <dialog id="cover-dialog">
+    <button class="dialog-close" type="button" aria-label="Close enlarged cover">Close ×</button>
+    <img id="dialog-image" alt="">
+    <p id="dialog-label"></p>
+  </dialog>
+
+  <script src="vote.js"></script>
+</body>
+</html>
