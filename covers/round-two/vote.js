@@ -58,7 +58,7 @@
       event.preventDefault();
       event.stopPropagation();
       const number = button.dataset.zoom;
-      dialogImage.src = `assets/cover-${number}.webp`;
+      dialogImage.src = `/covers/round-two/assets/cover-${number}.webp`;
       dialogImage.alt = `Peace Over Comfort cover option ${number}`;
       dialogLabel.textContent = `Option ${number}`;
       dialog.showModal();

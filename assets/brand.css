@@ -18,13 +18,19 @@
   position: relative; z-index: 50; backdrop-filter: blur(16px);
 }
 .poc-wordmark {
-  width: max-content; display: inline-grid; grid-template-columns: auto 48px auto;
-  align-items: center; gap: 11px; color: inherit; text-decoration: none;
-  text-transform: uppercase;
+  width: 148px; display: inline-grid; grid-template-columns: 1fr;
+  grid-template-rows: auto 1px auto; align-items: center; gap: 5px;
+  color: inherit; text-decoration: none; text-transform: uppercase;
 }
-.poc-wordmark strong { font: 500 27px/1 var(--poc-display); letter-spacing: .035em; }
-.poc-wordmark i { display: block; height: 1px; background: var(--poc-gold); }
-.poc-wordmark small { font: 700 9px/1.2 var(--poc-body); letter-spacing: .18em; }
+.poc-wordmark strong {
+  display: block; font: 500 32px/.86 var(--poc-display);
+  letter-spacing: .075em; text-align: center;
+}
+.poc-wordmark i { display: block; width: 100%; height: 1px; background: var(--poc-gold); }
+.poc-wordmark small {
+  display: block; font: 700 9px/1 var(--poc-body);
+  letter-spacing: .31em; text-align: center; white-space: nowrap;
+}
 .poc-nav-links { display: flex; align-items: center; gap: 26px; }
 .poc-nav-links a {
   color: inherit; font: 700 9px/1.2 var(--poc-body); letter-spacing: .13em;
@@ -96,9 +102,9 @@ body.poc-review .brief { border-radius: 0; }
 
 @media (max-width: 760px) {
   .poc-global-nav { min-height: 70px; padding: 15px 18px; }
-  .poc-wordmark { grid-template-columns: auto 28px auto; gap: 7px; }
-  .poc-wordmark strong { font-size: 20px; }
-  .poc-wordmark small { font-size: 7px; }
+  .poc-wordmark { width: 122px; grid-template-columns: 1fr; gap: 4px; }
+  .poc-wordmark strong { font-size: 27px; }
+  .poc-wordmark small { font-size: 7px; letter-spacing: .3em; }
   .poc-nav-links { gap: 14px; }
   .poc-nav-links a:not(:last-child) { display: none; }
   body.qr-page main { grid-template-columns: 1fr; padding-top: 62px; }
