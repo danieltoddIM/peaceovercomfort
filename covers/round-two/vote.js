@@ -14,12 +14,12 @@
 
   const uuid = () => {
     if (crypto.randomUUID) return crypto.randomUUID();
-    return `${Date.now()}-${Math.random().toString(16).slice(2)}`;
+    return '10000000-1000-4000-8000-100000000000'.replace(/[018]/g, c => (Number(c) ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> Number(c) / 4).toString(16));
   };
 
   let saved = {};
   try { saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); } catch {}
-  const voterId = saved.voterId || uuid();
+  const voterId = /^[a-f0-9-]{36}$/i.test(saved.voterId || '') ? saved.voterId : uuid();
 
   const fields = ['whyFavorite', 'whyNotOthers', 'pickupReason', 'name'];
   fields.forEach((name) => {
@@ -37,7 +37,7 @@
   function persist(submitted = false) {
     const data = { voterId, favorite: selected(), submitted };
     fields.forEach((name) => { data[name] = form.elements[name]?.value || ''; });
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); } catch {}
   }
 
   function renderChoice() {
@@ -58,7 +58,7 @@
       event.preventDefault();
       event.stopPropagation();
       const number = button.dataset.zoom;
-      dialogImage.src = `assets/cover-${number}.webp`;
+      dialogImage.src = `/covers/round-two/assets/cover-${number}.webp`;
       dialogImage.alt = `Peace Over Comfort cover option ${number}`;
       dialogLabel.textContent = `Option ${number}`;
       dialog.showModal();
@@ -101,7 +101,9 @@
         body: JSON.stringify(payload),
         signal: AbortSignal.timeout(20000)
       });
-      const data = await response.json();
+      let data;
+      try { data = await response.json(); }
+      catch { throw new Error('Voting is temporarily unavailable. Your answers are still here—please try again shortly.'); }
       if (!response.ok || !data.ok) throw new Error(data.error || 'Your response was not saved. Please try again.');
       persist(true);
       form.hidden = true;

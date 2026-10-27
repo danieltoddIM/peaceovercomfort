@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Round Two cover voting results for Peace Over Comfort by Daniel Todd.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#f5efe4">
+  <title>Round Two Review | Peace Over Comfort</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Oswald:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/brand.css">
+  <link rel="stylesheet" href="/covers/round-two/design-review/review.css">
+</head>
+<body>
+  <nav class="poc-global-nav" aria-label="Primary navigation">
+    <a class="poc-wordmark" href="/" aria-label="Peace Over Comfort home"><strong>Peace</strong><i></i><small>Over Comfort</small></a>
+    <div class="poc-nav-links"><a href="/covers/design-review">Round One results</a><a href="/covers/round-two">Round Two vote</a></div>
+  </nav>
+
+  <header class="review-hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Round Two · Live design review</p>
+      <h1>The final<br>cover conversation.</h1>
+      <p>One favorite. Three refined designs. The comments below show what makes readers stop, what loses them, and what would make them pick up the book.</p>
+      <div class="live-line"><span class="live-dot"></span><span id="live-status">Loading Round Two responses…</span></div>
+      <div class="hero-actions">
+        <button id="refresh" type="button">Refresh results</button>
+        <button id="print" type="button">Print / Save PDF</button>
+      </div>
+    </div>
+    <div class="leader" id="leader">
+      <span>Current leader</span>
+      <div class="leader-empty">Waiting for the first response</div>
+    </div>
+  </header>
+
+  <nav class="jumpbar" aria-label="Review sections">
+    <a href="#results">The vote</a>
+    <a href="#covers">The three covers</a>
+    <a href="#responses">Every response</a>
+    <a href="#takeaways">What to look for</a>
+  </nav>
+
+  <main>
+    <section class="metrics" aria-label="Round Two summary">
+      <div><strong id="response-total">0</strong><span>Responses</span></div>
+      <div><strong id="leader-number">—</strong><span>Current leader</span></div>
+      <div><strong id="leader-share">—</strong><span>Leader’s share</span></div>
+      <div><strong>3</strong><span>Refined covers</span></div>
+    </section>
+
+    <section id="results">
+      <div class="section-head">
+        <div><p class="eyebrow">01 · The vote</p><h2>One choice makes the signal clearer.</h2></div>
+        <p>Each response counts once. Percentages are based on all submitted Round Two votes.</p>
+      </div>
+      <div class="result-list" id="result-list" aria-live="polite"></div>
+    </section>
+
+    <section id="covers">
+      <div class="section-head">
+        <div><p class="eyebrow">02 · Visual reference</p><h2>The three finalists.</h2></div>
+        <p>These are the refined covers voters saw. Select any cover to enlarge it.</p>
+      </div>
+      <div class="cover-grid">
+        <article><button class="cover-button" data-cover="1"><img src="/covers/round-two/assets/cover-1.webp" alt="Round Two cover option 1"></button><div><strong>Option 1</strong><span id="cover-count-1">0 votes</span></div></article>
+        <article><button class="cover-button" data-cover="5"><img src="/covers/round-two/assets/cover-5.webp" alt="Round Two cover option 5"></button><div><strong>Option 5</strong><span id="cover-count-5">0 votes</span></div></article>
+        <article><button class="cover-button" data-cover="6"><img src="/covers/round-two/assets/cover-6.webp" alt="Round Two cover option 6"></button><div><strong>Option 6</strong><span id="cover-count-6">0 votes</span></div></article>
+      </div>
+    </section>
+
+    <section id="responses">
+      <div class="section-head">
+        <div><p class="eyebrow">03 · Original feedback</p><h2>Every voice, in context.</h2></div>
+        <p>Comments are shown as submitted. Voters’ names remain private.</p>
+      </div>
+      <div class="response-tools">
+        <span id="response-count">Showing 0 responses</span>
+        <label>Filter by favorite
+          <select id="filter"><option value="all">All options</option><option value="1">Option 1</option><option value="5">Option 5</option><option value="6">Option 6</option></select>
+        </label>
+      </div>
+      <div class="response-list" id="response-list"></div>
+      <div class="empty-state" id="empty-state">Round Two responses will appear here as they arrive.</div>
+    </section>
+
+    <section id="takeaways">
+      <div class="section-head">
+        <div><p class="eyebrow">04 · For the final decision</p><h2>Look beyond the winner.</h2></div>
+        <p>The vote identifies preference. The comments explain the mechanism behind it.</p>
+      </div>
+      <div class="takeaway-grid">
+        <article><span>Attraction</span><h3>Why did readers choose it?</h3><p>Look for repeated language about clarity, emotion, credibility, and immediate curiosity.</p></article>
+        <article><span>Resistance</span><h3>Why did the others lose?</h3><p>Notice recurring problems with hierarchy, readability, imagery, mood, or perceived genre.</p></article>
+        <article><span>Purchase intent</span><h3>What makes them pick it up?</h3><p>Prioritize the cover that makes the subtitle’s promise feel relevant and worth exploring.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>Peace Over Comfort · Daniel Todd</span><span>Round Two reader feedback</span></footer>
+
+  <dialog id="cover-modal"><button id="close-modal" aria-label="Close enlarged cover">Close ×</button><img id="modal-image" alt=""><p id="modal-label"></p></dialog>
+  <script src="/covers/round-two/design-review/review.js"></script>
+</body>
+</html>

@@ -9,15 +9,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Oswald:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="vote.css">
+  <link rel="stylesheet" href="/covers/round-two/vote.css">
+  <link rel="stylesheet" href="/assets/brand.css">
 </head>
 <body>
   <header class="site-nav">
-    <a class="quiet-wordmark" href="/" aria-label="Peace Over Comfort home">
-      <span>Peace</span><i></i><small>Over Comfort</small>
+    <a class="poc-wordmark" href="/" aria-label="Peace Over Comfort home">
+      <strong>Peace</strong><i></i><small>Over Comfort</small>
     </a>
     <div class="round-nav">
-      <a href="/covers/design-review">See Round One results</a>
+      <a href="/">About the book</a>
       <span class="round-label">Round Two · Final cover vote</span>
     </div>
   </header>
@@ -47,7 +48,7 @@
           <label class="cover-card" data-cover="1">
             <input type="radio" name="favorite" value="1" required>
             <span class="cover-image-wrap">
-              <img src="assets/cover-1.webp" alt="Peace Over Comfort cover option 1, a hiker overlooking mountains at sunrise" width="1536" height="2304">
+              <img src="/covers/round-two/assets/cover-1.webp" alt="Peace Over Comfort cover option 1, a hiker overlooking mountains at sunrise" width="1536" height="2304">
               <button class="zoom" type="button" data-zoom="1" aria-label="Enlarge cover option 1">View larger ↗</button>
               <span class="selected-mark">My favorite ✓</span>
             </span>
@@ -57,7 +58,7 @@
           <label class="cover-card" data-cover="5">
             <input type="radio" name="favorite" value="5" required>
             <span class="cover-image-wrap">
-              <img src="assets/cover-5.webp" alt="Peace Over Comfort cover option 5, an editorial painted mountain landscape" width="1536" height="2304">
+              <img src="/covers/round-two/assets/cover-5.webp" alt="Peace Over Comfort cover option 5, an editorial painted mountain landscape" width="1536" height="2304">
               <button class="zoom" type="button" data-zoom="5" aria-label="Enlarge cover option 5">View larger ↗</button>
               <span class="selected-mark">My favorite ✓</span>
             </span>
@@ -67,7 +68,7 @@
           <label class="cover-card" data-cover="6">
             <input type="radio" name="favorite" value="6" required>
             <span class="cover-image-wrap">
-              <img src="assets/cover-6.webp" alt="Peace Over Comfort cover option 6, a minimal circular brushstroke design" width="1536" height="2304">
+              <img src="/covers/round-two/assets/cover-6.webp" alt="Peace Over Comfort cover option 6, a minimal circular brushstroke design" width="1536" height="2304">
               <button class="zoom" type="button" data-zoom="6" aria-label="Enlarge cover option 6">View larger ↗</button>
               <span class="selected-mark">My favorite ✓</span>
             </span>
@@ -115,7 +116,7 @@
           </div>
 
           <button class="submit" type="submit">Send my vote and feedback <span aria-hidden="true">→</span></button>
-          <p class="privacy">Your response goes directly to Daniel. Your name and comments are not shown to other voters.</p>
+          <p class="privacy">Your response goes to Daniel. Votes, names, and comments are not shown to other voters.</p>
           <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
         </div>
       </section>
@@ -137,6 +138,6 @@
     <p id="dialog-label"></p>
   </dialog>
 
-  <script src="vote.js"></script>
+  <script src="/covers/round-two/vote.js"></script>
 </body>
 </html>

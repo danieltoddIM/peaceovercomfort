@@ -1,9 +1,9 @@
 :root {
   --paper: #f4efe5;
-  --ink: #152b2f;
+  --ink: #29251f;
   --muted: #66706b;
   --gold: #a87225;
-  --deep: #10272c;
+  --deep: #191a18;
   --line: rgba(21, 43, 47, .18);
   --display: "Oswald", sans-serif;
   --body: "Libre Franklin", sans-serif;
@@ -11,12 +11,13 @@
 }
 
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { scroll-behavior: smooth; }
 body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--body); }
 button, input, textarea { font: inherit; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
-.site-nav { display: flex; align-items: center; justify-content: space-between; padding: 24px clamp(22px, 6vw, 88px); border-bottom: 1px solid var(--line); }
+.site-nav { min-height: 82px; display: flex; align-items: center; justify-content: space-between; padding: 18px clamp(22px, 6vw, 88px); border-bottom: 1px solid var(--line); }
 .quiet-wordmark { display: inline-grid; grid-template-columns: auto 42px auto; align-items: center; gap: 10px; color: inherit; text-decoration: none; text-transform: uppercase; }
 .quiet-wordmark span { font: 500 25px/1 var(--display); letter-spacing: .04em; }
 .quiet-wordmark i { height: 1px; background: var(--gold); }
@@ -70,7 +71,7 @@ input { height: 52px; padding: 0 15px; }
 textarea:focus, input:focus { border-color: #dca653; background: rgba(255,255,255,.085); }
 textarea::placeholder, input::placeholder { color: rgba(247,242,232,.35); }
 .name-row { display: grid; grid-template-columns: 1fr 240px; gap: 38px; padding: 34px 0; border-top: 1px solid rgba(255,255,255,.18); }
-.name-row label { display: grid; grid-template-columns: minmax(220px, .65fr) minmax(320px, 1fr); gap: 38px; }
+.name-row label { display: grid; grid-template-columns: minmax(0, .65fr) minmax(0, 1fr); gap: 38px; min-width: 0; }
 .chosen-summary { display: grid; align-content: center; gap: 8px; padding-left: 26px; border-left: 1px solid rgba(255,255,255,.18); }
 .chosen-summary span { color: rgba(247,242,232,.5); font-size: 9px; letter-spacing: .14em; text-transform: uppercase; }
 .chosen-summary strong { color: #dca653; font: 500 22px var(--display); text-transform: uppercase; }

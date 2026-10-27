@@ -1,41 +1,51 @@
-PEACE OVER COMFORT — CONCEPT 1 HOMEPAGE UPDATE
+PEACE OVER COMFORT — OPTION THREE / FROM SHADOW TO LIGHT
 
-FILES IN THIS PACKAGE
-- index.html
-- styles.css
-- assets/cover-1.webp
-- covers/round-two/index.html
-- covers/round-two/vote.css
-- covers/round-two/vote.js
-- covers/round-two/assets/cover-1.webp
-- covers/round-two/assets/cover-5.webp
-- covers/round-two/assets/cover-6.webp
+Homepage redesigned in charcoal, cream and amber. Live HTML text sits above
+a separate mountain horizon, with the actual mountain cover in its own section.
+Mountain image generated with the built-in image tool: photorealistic wide
+Arizona-inspired ridges, charcoal sky, amber dawn, no text or book imagery.
+The image is illustrative, not a photograph of a named landmark.
 
-HOW TO USE THIS IN THE EXISTING VERCEL PROJECT
-1. Replace the existing homepage index.html with this index.html.
-2. Replace or add styles.css at the project root.
-3. Add the assets folder and cover-1.webp.
-4. Add the included /covers/round-two folder. Do not replace the existing
-   /covers page.
-5. Keep the original /covers voting page, /covers/design-review results page,
-   their first-round data, and /qr-code. Do not delete or modify them.
-6. Commit the changes to the branch connected to Vercel.
-7. Review the Vercel preview deployment before promoting it to Production.
+PRIVACY UPDATE
+Both voting pages no longer link to results. Both rounds' backend results
+require the existing owner sign-in or results password (username: daniel).
+Round One static result snapshots have been replaced with private-access pages.
+No database responses were deleted. Include design-review.html in your upload
+to replace the older root-level public snapshot, if it is still in your repo.
+Private review links for Daniel:
+https://peace-over-comfort-cover-vote.influence-mo-0784.chatgpt.site/design-review
+https://peace-over-comfort-cover-vote.influence-mo-0784.chatgpt.site/round-two-review
+If a password has never been set, use the existing owner-setup page on that
+same service while signed in as the owner. No password is embedded in this ZIP.
 
-The homepage links to these existing paths:
-- /qr-code
-- /covers/round-two
+No Redis account or new Vercel environment variables are required.
+The existing hosted voting service has a separate Round Two API/table.
+Round One records and its original API are unchanged.
 
-The Round Two voting page POSTs JSON to /covers/api/round-two-votes with round
-set to "round-two", favorite set to 1, 5, or 6, and picks containing that single
-favorite. It also sends whyFavorite, whyNotOthers, pickupReason, a combined
-feedback field, the optional name, and a stable browser voterId.
+DEPLOY
+1. Upload the CONTENTS of this folder into the root of the existing GitHub
+   repository. Keep covers/, assets/, qr-code/, welcome/ and vercel.json at
+   their existing locations. Do not upload the enclosing folder as a new path.
+2. Include vercel.json: it reconnects voting to the existing service.
+3. Commit to your Vercel-connected branch and wait for deployment to finish.
+4. Reload /covers/round-two and submit your own real vote with name blank.
+   Check /covers/round-two/design-review for that response.
 
-IMPORTANT: Add a separate Round Two API and data store at
-/covers/api/round-two-votes. Do not repurpose the original /covers/api/votes
-endpoint or its stored responses. This preserves the complete Round One voting
-history and prevents the two result sets from being mixed.
+If the earlier Redis file api/round-two-votes.js was uploaded, remove that
+obsolete file. This package no longer uses it. Do not delete other API files.
 
-UPDATED VERSION
-The book-cover display is locked to its original 2:3 proportion and capped to
-the available viewport height so it cannot stretch or run off the screen.
+ROUTES
+/covers/round-two — choose one of three covers and answer three questions
+/covers/round-two/design-review — private Round Two review
+/covers/design-review — private Round One review
+/covers/results — original protected Round One results
+/covers — original Round One voting page
+/qr-code, /qr, /welcome — existing redesigned QR and welcome pages
+
+Name remains optional. Browser IDs allow updates without duplicate votes.
+Do not clear browser storage when retrying a failed submission.
+Only a successful server response shows the saved confirmation. A timeout
+can be retried safely with the same browser ID.
+
+The Vercel frontend still requires the upload above. Backend deployment alone
+does not change the Vercel website's configuration.
