@@ -6,6 +6,13 @@ Mountain image generated with the built-in image tool: photorealistic wide
 Arizona-inspired ridges, charcoal sky, amber dawn, no text or book imagery.
 The image is illustrative, not a photograph of a named landmark.
 
+COHESIVE DESIGN UPDATE
+The homepage, welcome, QR, and both voting pages share a consistent wordmark,
+navigation, charcoal/cream/amber palette, spacing and responsive typography.
+The welcome page uses the mountain horizon below a properly spaced wordmark.
+Voting remains visually neutral around the cover choices. Voting logic,
+existing music links, QR downloads, and backend connections are preserved.
+
 PRIVACY UPDATE
 Both voting pages no longer link to results. Both rounds' backend results
 require the existing owner sign-in or results password (username: daniel).

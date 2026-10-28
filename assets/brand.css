@@ -106,10 +106,81 @@ body.poc-review .brief { border-radius: 0; }
   .poc-wordmark strong { font-size: 27px; }
   .poc-wordmark small { font-size: 7px; letter-spacing: .3em; }
   .poc-nav-links { gap: 14px; }
-  .poc-nav-links a:not(:last-child) { display: none; }
+  .poc-nav-links a:not(:last-child) { display: inline-block; }
   body.qr-page main { grid-template-columns: 1fr; padding-top: 62px; }
   body.qr-page .qr-intro { text-align: center; }
   body.qr-page .notes { grid-template-columns: 1fr; }
   body.welcome-page .head { min-height: 570px; }
   body.welcome-page footer { align-items: center; flex-direction: column; gap: 10px; }
 }
+
+/* Shared mountain editorial system. Intentionally last: neutralize legacy page themes. */
+:root{color-scheme:light;--poc-paper:#f7f1e6;--poc-ink:#29251f;--poc-muted:#655d52;--poc-gold:#916126;--poc-deep:#191a18;--poc-line:#ded3c1;--poc-amber:#e3b36e}
+body{--bg:var(--poc-paper);--paper:var(--poc-paper);--ink:var(--poc-ink);--muted:var(--poc-muted);--line:var(--poc-line);--ember:var(--poc-gold);--gold:var(--poc-gold);--deep:var(--poc-deep);--card:#fffdf7;--raise:#eee5d7;color-scheme:light}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:24px}a,button,input,textarea,select{-webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--poc-gold);outline-offset:5px}
+[hidden]{display:none!important}
+.poc-global-nav,.site-nav,.mountain-nav{min-height:96px!important;background:var(--poc-deep)!important;color:var(--poc-paper)!important;border-bottom:1px solid #ffffff18!important;padding:24px clamp(22px,6vw,88px)!important;display:flex;align-items:center;justify-content:space-between;gap:32px}
+.poc-wordmark{flex-shrink:0;width:140px;gap:7px;grid-template-rows:auto 1px auto}
+.poc-wordmark strong{font:500 32px/1 var(--poc-display);letter-spacing:.075em}
+.poc-wordmark i{background:var(--poc-amber)}
+.poc-wordmark small{font:600 9px/1.35 var(--poc-body);letter-spacing:.28em}
+.poc-nav-links,.round-nav,.mountain-nav nav{display:flex;gap:24px;align-items:center;justify-content:flex-end;flex-wrap:wrap}
+.poc-nav-links a,.round-nav a,.mountain-nav nav a{display:inline-block!important;color:var(--poc-paper)!important;text-decoration:none;font:500 10px/1.5 var(--poc-body)!important;letter-spacing:.12em!important;text-transform:uppercase;padding:8px 0}
+.poc-nav-links a:hover,.round-nav a:hover,.mountain-nav nav a:hover,.poc-nav-links a[aria-current=page],.round-nav a[aria-current=page],.mountain-nav nav a[aria-current=page]{color:var(--poc-amber)!important}
+.round-label{display:none}
+body.poc-subpage::before{display:none}
+body.poc-subpage h1,body.poc-subpage h2,body.poc-subpage h3{line-height:1.12;letter-spacing:-.025em}
+.poc-outline{display:inline-flex;align-items:center;justify-content:center;gap:24px;min-height:50px;padding:14px 22px;color:var(--poc-amber);border:1px solid var(--poc-amber);font:600 11px/1.5 var(--poc-body);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;margin-top:26px}
+.poc-outline:hover{background:var(--poc-amber);color:var(--poc-deep)}
+.poc-horizon{height:clamp(150px,19vw,270px);background:linear-gradient(var(--poc-deep),transparent 35%),url('/assets/mountain-horizon.png') center 70%/cover no-repeat;background-color:var(--poc-deep)}
+body.welcome-page .head{min-height:0;padding:62px 24px 28px;background:var(--poc-deep);color:var(--poc-paper)}
+body.welcome-page .head .eyebrow{color:var(--poc-amber);margin-bottom:28px;font-size:11px}
+body.welcome-page .head h1.welcome-wordmark{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;width:min(460px,85vw);max-width:100%;margin:0;text-transform:uppercase;letter-spacing:normal;line-height:1;text-wrap:nowrap}
+.welcome-wordmark .wm-peace{display:block;font:500 clamp(72px,10vw,116px)/1.05 var(--poc-display);letter-spacing:.075em;padding-left:.075em}
+.welcome-wordmark .wm-rule{height:1px;width:100%;background:var(--poc-amber)}
+.welcome-wordmark .wm-over{display:block;font:600 clamp(13px,2vw,20px)/1.4 var(--poc-body);letter-spacing:.34em;padding-left:.34em;white-space:nowrap}
+body.welcome-page .subtitle{max-width:750px;margin-top:30px;color:var(--poc-paper);font:400 clamp(21px,2.2vw,29px)/1.5 var(--poc-soft);text-wrap:balance}
+body.welcome-page .thanks{margin-top:20px;color:#d8d0c3;font:400 15px/1.7 var(--poc-body)}
+body.welcome-page section{max-width:1100px;padding:64px clamp(22px,5vw,64px)}
+body.welcome-page h2{font:400 clamp(32px,4vw,48px)/1.2 var(--poc-soft);text-transform:none;letter-spacing:-.025em}
+body.welcome-page .intro{font-size:16px;line-height:1.85}
+body.welcome-page .play-all{min-height:50px;padding:15px 22px;font:600 12px/1.5 var(--poc-body);background:var(--poc-deep);color:var(--poc-paper)}
+body.welcome-page ol.tracks{margin-top:34px}
+body.welcome-page ol.tracks a{min-height:80px;padding:18px 12px;gap:5px 16px}
+body.welcome-page .t-title{font:500 clamp(20px,2vw,25px)/1.25 var(--poc-display);letter-spacing:0}
+body.welcome-page .t-verse{font-size:13px;line-height:1.5}
+body.welcome-page .t-style,body.welcome-page .t-listen{color:var(--poc-muted);font-size:12px;line-height:1.5}
+body.welcome-page .coming div{background:#fffcf5;border:1px solid var(--poc-line);padding:25px}
+body.qr-page main{padding-top:64px;padding-bottom:60px;gap:50px 70px}
+body.qr-page .qr-intro h1{font:500 clamp(48px,6vw,76px)/1.1 var(--poc-display);letter-spacing:-.03em}
+body.qr-page .lede{font:400 clamp(20px,2vw,25px)/1.55 var(--poc-soft)}
+body.qr-page .qr-panel{box-shadow:none;background:#fffdf7;padding:30px;border:1px solid var(--poc-line)}
+body.qr-page .btn{min-height:80px;line-height:1.5}
+body.qr-page .notes{gap:24px;grid-template-columns:repeat(3,minmax(0,1fr))}
+body.qr-page .notes h2{grid-column:1/-1;margin:0}
+body.qr-page .notes p{font-size:14px;line-height:1.8}
+body.qr-page::after{content:'';display:block;height:140px;background:linear-gradient(var(--poc-deep),transparent 40%),url('/assets/mountain-horizon.png') center 72%/cover}
+body.round-two-page .intro{min-height:0;padding:62px 24px 58px;background:var(--poc-deep);color:var(--poc-paper)}
+body.round-two-page .intro h1{font:500 clamp(42px,5.5vw,76px)/1.12 var(--poc-display);max-width:850px}
+body.round-two-page .intro .eyebrow,body.round-two-page .intro .from-daniel span{color:var(--poc-amber)}
+body.round-two-page .lede{font:400 clamp(18px,1.8vw,23px)/1.6 var(--poc-soft);color:#ded6c9;margin-top:24px;max-width:760px}
+body.round-two-page .from-daniel{color:#ded6c9;margin-top:18px}
+body.round-two-page .begin{margin-top:24px;color:var(--poc-amber)}
+body.round-two-page .cover-section,body.round-two-page .feedback{padding-top:68px;padding-bottom:68px}
+body.round-two-page .cover-grid{max-width:1120px}
+body.round-two-page .section-heading{max-width:1120px;margin-bottom:38px}
+body.round-two-page .section-heading h2,body.round-two-page .thanks h2{font-size:clamp(32px,4vw,50px);line-height:1.15}
+body.round-two-page .zoom{background:#191a18e8;min-height:44px}
+body.round-two-page .feedback .step,body.round-two-page .chosen-summary strong{color:var(--poc-amber)}
+body.round-two-page .feedback .section-heading>p{color:#ded6c9}
+body.poc-vote main{max-width:1240px}
+body.poc-vote .intro{background:none;padding-top:54px;padding-bottom:40px}
+body.poc-vote .intro h1{font:500 clamp(42px,5vw,70px)/1.12 var(--poc-display)}
+body.poc-vote .intro h1 em{font-style:normal;color:var(--poc-gold)}
+body.poc-vote .privacy{color:var(--poc-muted);line-height:1.6}
+body .review-hero h1{line-height:1.08;font-size:clamp(48px,6vw,88px)}
+.review-hero{min-height:0;padding-top:64px;padding-bottom:64px;background:var(--poc-paper)}
+.jumpbar{background:var(--poc-deep)}
+@media(max-width:760px){.poc-global-nav,.site-nav,.mountain-nav{min-height:90px!important;padding:20px!important;align-items:flex-start;gap:20px}.poc-wordmark{width:115px}.poc-wordmark strong{font-size:27px}.poc-wordmark small{font-size:7px}.poc-nav-links,.round-nav,.mountain-nav nav{gap:6px 16px;max-width:220px}.poc-nav-links a,.round-nav a,.mountain-nav nav a{font-size:9px!important;padding:5px 0}.welcome-wordmark .wm-over{letter-spacing:.28em;padding-left:.28em}body.welcome-page .head{padding-top:44px}body.welcome-page .head h1.welcome-wordmark{width:min(340px,82vw);gap:12px}body.welcome-page .subtitle{max-width:520px;font-size:22px}body.welcome-page section{padding:46px 22px}body.welcome-page ol.tracks a{grid-template-columns:24px minmax(0,1fr) auto;gap:5px 10px}body.welcome-page .t-style{max-width:85px;text-align:right}body.qr-page main{padding:46px 22px;gap:34px}body.qr-page .qr-panel{padding:24px 18px}body.qr-page .notes{grid-template-columns:1fr;gap:16px}body.round-two-page .intro{padding:44px 22px}body.round-two-page .cover-section,body.round-two-page .feedback{padding:46px 22px}.poc-horizon{height:160px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
