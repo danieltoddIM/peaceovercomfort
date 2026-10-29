@@ -22,6 +22,26 @@
       "source": "/qr",
       "destination": "/welcome",
       "permanent": false
+    },
+    {
+      "source": "/covers",
+      "destination": "/#book",
+      "permanent": false
+    },
+    {
+      "source": "/covers/:path*",
+      "destination": "/#book",
+      "permanent": false
+    },
+    {
+      "source": "/design-review.html",
+      "destination": "/#book",
+      "permanent": false
+    },
+    {
+      "source": "/api/round-two-votes",
+      "destination": "/#book",
+      "permanent": false
     }
   ]
 }
