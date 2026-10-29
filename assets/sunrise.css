@@ -1,0 +1,54 @@
+/* Sunrise direction: one light, hopeful system across all public pages. */
+:root{--poc-paper:#fff8ed;--poc-ink:#382b22;--poc-muted:#685849;--poc-gold:#825223;--poc-deep:#493526;--poc-line:#e4d4bf;--poc-amber:#bb8547;--cream:#fff8ed;--ink:#382b22;--night:#493526;--amber:#825223}
+body{background:var(--poc-paper);color:var(--poc-ink)}
+.poc-global-nav,.site-nav,.mountain-nav{background:var(--poc-paper)!important;color:var(--poc-ink)!important;border-bottom:1px solid var(--poc-line)!important}
+.poc-nav-links a,.mountain-nav nav a{color:var(--poc-ink)!important;min-height:44px;display:inline-flex!important;align-items:center}
+.poc-nav-links a:hover,.mountain-nav nav a:hover,.poc-nav-links a[aria-current=page],.mountain-nav nav a[aria-current=page]{color:var(--poc-gold)!important;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:7px}
+.mountain-hero,body.welcome-page .head{background:var(--poc-paper);color:var(--poc-ink)}
+.opening-copy{padding-top:48px;padding-bottom:32px}
+.mountain-hero .eyebrow,body.welcome-page .head .eyebrow{color:var(--poc-gold)}
+.mountain-subtitle,body.welcome-page .subtitle{color:var(--poc-ink)}
+.mountain-promise,body.welcome-page .thanks{color:var(--poc-muted)}
+.outline-button,.poc-outline{border-color:var(--poc-gold);color:var(--poc-gold);font-weight:600}
+.outline-button:hover,.poc-outline:hover{background:var(--poc-gold);color:#fff8ed}
+.horizon{height:clamp(200px,28vw,400px);margin-top:0}
+.horizon img{object-position:center 60%}
+.horizon:after{background:linear-gradient(var(--poc-paper),transparent 24%)}
+.poc-horizon{height:clamp(170px,23vw,310px);background:linear-gradient(var(--poc-paper),transparent 24%),url('/assets/sunrise-horizon.png') center 60%/cover no-repeat}
+.message-section{background:#f3e7d5}
+.quote-section{background:#f7e7cd;color:var(--poc-ink);border-top:1px solid var(--poc-line);border-bottom:1px solid var(--poc-line)}
+.quote-section em{color:var(--poc-gold)}
+.quote-section cite{color:var(--poc-muted)}
+.solid-button,body.welcome-page .play-all,body.qr-page .btn.primary{background:var(--poc-deep);border-color:var(--poc-deep);color:#fff8ed}
+.solid-button:hover,body.welcome-page .play-all:hover,body.qr-page .btn.primary:hover{background:#65472e}
+.mountain-footer,body.welcome-page footer{background:var(--poc-paper);color:var(--poc-muted);border-top:1px solid var(--poc-line)}
+body.welcome-page footer a{color:var(--poc-gold)}
+body.welcome-page .head{padding-top:44px;padding-bottom:26px}
+body.welcome-page .head h1.welcome-wordmark{width:min(390px,82vw);gap:14px}
+.welcome-wordmark .wm-peace{font-size:clamp(64px,8vw,96px)}
+body.welcome-page .subtitle{margin-top:26px}
+body.welcome-page .music-note{color:var(--poc-muted);font:400 12px/1.6 var(--poc-body);margin:12px 0 0}
+body.welcome-page .coming div{background:#fffdf7}
+body.qr-page::after{height:clamp(170px,22vw,300px);background:linear-gradient(var(--poc-paper),transparent 22%),url('/assets/sunrise-horizon.png') center 60%/cover no-repeat}
+body.qr-page .qr-intro h1{margin-top:12px}
+body.qr-page .url a{color:var(--poc-gold);text-underline-offset:4px}
+body.qr-page .notes h2{font:600 12px/1.5 var(--poc-body);letter-spacing:.1em}
+.skip{position:absolute;top:-100px;left:20px;z-index:100}
+.skip:focus{top:12px;background:var(--poc-paper);color:var(--poc-ink);padding:14px}
+@media(max-width:760px){
+ .poc-global-nav,.mountain-nav{gap:16px;align-items:center}
+ .poc-nav-links,.mountain-nav nav{gap:0 12px;max-width:205px}
+ .poc-nav-links a,.mountain-nav nav a{min-height:44px;font-size:9px!important}
+ .opening-copy{padding:34px 22px 28px}
+ .mountain-hero h1{font-size:clamp(37px,10vw,72px);letter-spacing:-.025em}
+ .mountain-subtitle br{display:none}
+ .horizon{height:210px}
+ body.welcome-page .head{padding:30px 22px 22px}
+ body.welcome-page .subtitle{font-size:21px}
+ .poc-horizon{height:170px}
+ body.welcome-page .t-style{max-width:72px;font-size:11px;white-space:normal}
+ body.welcome-page .t-title{overflow-wrap:anywhere}
+ body.qr-page .downloads{grid-template-columns:1fr}
+ body.qr-page .btn{min-height:70px}
+}
+@media(max-width:540px){body.welcome-page ol.tracks a{grid-template-columns:24px minmax(0,1fr)}body.welcome-page .t-title{grid-column:2;grid-row:1}body.welcome-page .t-verse{grid-column:2;grid-row:2}body.welcome-page .t-style{grid-column:2;grid-row:3;text-align:left;max-width:none}body.welcome-page .t-listen{display:none}body.welcome-page ol.tracks{padding-left:0}}
