@@ -1,4 +1,22 @@
 {
+  "rewrites": [
+    {
+      "source": "/covers/api/round-two-votes",
+      "destination": "https://peace-over-comfort-cover-vote.influence-mo-0784.chatgpt.site/api/round-two-votes"
+    },
+    {
+      "source": "/covers/api/:path*",
+      "destination": "https://peace-over-comfort-cover-vote.influence-mo-0784.chatgpt.site/api/:path*"
+    },
+    {
+      "source": "/covers/design-review",
+      "destination": "https://peace-over-comfort-cover-vote.influence-mo-0784.chatgpt.site/design-review"
+    },
+    {
+      "source": "/covers/results",
+      "destination": "https://peace-over-comfort-cover-vote.influence-mo-0784.chatgpt.site/results"
+    }
+  ],
   "redirects": [
     {
       "source": "/qr",
