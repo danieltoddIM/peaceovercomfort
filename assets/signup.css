@@ -1,0 +1,24 @@
+/* Scoped to the homepage signup. Existing brand styles are unchanged. */
+.signup{max-width:880px;margin:32px auto 22px;padding:28px 30px 22px;text-align:left;background:#fffaf2;border:1px solid #e4d4bf;border-top:3px solid #C8963E;border-radius:4px;color:#3A2E24}
+.signup h2{font:400 clamp(25px,3vw,34px)/1.25 'Playfair Display',Georgia,serif;margin:0 0 10px;letter-spacing:-.02em;text-transform:none}
+.signup-intro{font-size:14px;line-height:1.7;margin:0 0 22px;color:#685849}
+.signup-fields{display:grid;grid-template-columns:1fr 1.4fr auto;gap:14px;align-items:end}
+.signup-fields>div{min-width:0}
+.signup-fields label{display:block;font-size:12px;font-weight:600;line-height:1.5;margin-bottom:7px}
+.signup-fields label span{font-weight:400}
+.signup-fields input{width:100%;min-height:50px;border:1px solid #a08b73;border-radius:3px;padding:12px;background:#fffdf9;color:#3A2E24;font:400 16px/1.5 'Libre Franklin',sans-serif}
+.signup-fields button{min-height:50px;border:1px solid #C8963E;border-radius:3px;padding:12px 20px;background:#C8963E;color:#302419;font:600 14px/1.5 'Libre Franklin',sans-serif;cursor:pointer;white-space:nowrap}
+.signup-fields button:hover:not(:disabled){background:#d5a957}
+.signup-fields button:disabled{opacity:.65;cursor:wait}
+.signup input:focus-visible,.signup button:focus-visible,.signup a:focus-visible,.signup-status:focus-visible{outline:3px solid #825223;outline-offset:3px}
+.signup [aria-invalid=true]{border-color:#9b2820}
+.signup-consent{display:flex;align-items:flex-start;gap:10px;margin-top:16px;font-size:12px;line-height:1.7;cursor:pointer}
+.signup-consent input{flex:0 0 auto;width:18px;height:18px;margin:1px 0 0;accent-color:#825223}
+.signup-social{font-size:12px;line-height:1.7;margin:14px 0 0;color:#685849}
+.signup-social a{color:#704719;text-underline-offset:3px;overflow-wrap:anywhere}
+.signup-status{font-size:14px;line-height:1.6;margin:0}
+.signup-status:not(:empty){margin-top:16px;padding:12px;border-left:3px solid #C8963E;background:#f5ecd9}
+.signup-status[data-state=error]{color:#84251f;border-color:#9b2820;background:#fff0eb}
+.signup-trap{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.signup-discover{display:inline-block;padding:10px;color:#825223;font-size:12px;text-underline-offset:5px}
+@media(max-width:650px){.signup{padding:22px 18px;margin-top:26px}.signup-fields{grid-template-columns:1fr;gap:14px}.signup-fields button{width:100%;margin-top:2px}.signup-intro{font-size:14px}.signup-consent{font-size:12px}}
