@@ -24,6 +24,16 @@
       "source": "/api/round-two-votes",
       "destination": "/#book",
       "permanent": false
+    },
+    {
+      "source": "/design-review",
+      "destination": "/#book",
+      "permanent": false
+    },
+    {
+      "source": "/api/votes",
+      "destination": "/#book",
+      "permanent": false
     }
   ]
 }
