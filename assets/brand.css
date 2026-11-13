@@ -84,22 +84,6 @@ body.welcome-page .coming div { border-style: solid; border-radius: 0; backgroun
 body.welcome-page footer { max-width: none; display: flex; justify-content: space-between; padding: 28px clamp(22px,6vw,88px); color: rgba(255,255,255,.68); background: var(--poc-deep); border: 0; }
 body.welcome-page footer a { color: #fff; }
 
-/* Original vote and review pages: preserve behavior and data, unify the brand. */
-body.poc-vote > header, body.poc-review > header > .nav { display: none; }
-body.poc-vote { --cream: var(--poc-paper); --ink: var(--poc-ink); --rust: var(--poc-gold); --line: var(--poc-line); }
-body.poc-vote .intro { background: radial-gradient(circle at 50% 100%, rgba(190,131,43,.16), transparent 45%); }
-body.poc-vote .intro h1, body.poc-review h1 { font-family: var(--poc-display); font-style: normal; text-transform: uppercase; letter-spacing: -.045em; }
-body.poc-vote .primary { border-radius: 0; background: var(--poc-deep); }
-body.poc-vote .thanks { border-radius: 0; }
-body.poc-review { --cream: var(--poc-paper); --ink: var(--poc-ink); --rust: var(--poc-gold); }
-body.poc-review > header { padding-top: 0; }
-body.poc-review > header .hero { background: radial-gradient(circle at 75% 70%, rgba(190,131,43,.18), transparent 42%); }
-body.poc-review .hero .eyebrow { color: var(--poc-gold); }
-body.poc-review .jumpbar { top: 0; }
-body.poc-review .s0 { background: var(--poc-deep); }
-body.poc-review .s1 { background: var(--poc-gold); }
-body.poc-review .brief { border-radius: 0; }
-
 @media (max-width: 760px) {
   .poc-global-nav { min-height: 70px; padding: 15px 18px; }
   .poc-wordmark { width: 122px; grid-template-columns: 1fr; gap: 4px; }
@@ -125,10 +109,9 @@ html{scroll-padding-top:24px}a,button,input,textarea,select{-webkit-tap-highligh
 .poc-wordmark strong{font:500 32px/1 var(--poc-display);letter-spacing:.075em}
 .poc-wordmark i{background:var(--poc-amber)}
 .poc-wordmark small{font:600 9px/1.35 var(--poc-body);letter-spacing:.28em}
-.poc-nav-links,.round-nav,.mountain-nav nav{display:flex;gap:24px;align-items:center;justify-content:flex-end;flex-wrap:wrap}
-.poc-nav-links a,.round-nav a,.mountain-nav nav a{display:inline-block!important;color:var(--poc-paper)!important;text-decoration:none;font:500 10px/1.5 var(--poc-body)!important;letter-spacing:.12em!important;text-transform:uppercase;padding:8px 0}
-.poc-nav-links a:hover,.round-nav a:hover,.mountain-nav nav a:hover,.poc-nav-links a[aria-current=page],.round-nav a[aria-current=page],.mountain-nav nav a[aria-current=page]{color:var(--poc-amber)!important}
-.round-label{display:none}
+.poc-nav-links,.mountain-nav nav{display:flex;gap:24px;align-items:center;justify-content:flex-end;flex-wrap:wrap}
+.poc-nav-links a,.mountain-nav nav a{display:inline-block!important;color:var(--poc-paper)!important;text-decoration:none;font:500 10px/1.5 var(--poc-body)!important;letter-spacing:.12em!important;text-transform:uppercase;padding:8px 0}
+.poc-nav-links a:hover:hover,.mountain-nav nav a:hover,.poc-nav-links a[aria-current=page][aria-current=page],.mountain-nav nav a[aria-current=page]{color:var(--poc-amber)!important}
 body.poc-subpage::before{display:none}
 body.poc-subpage h1,body.poc-subpage h2,body.poc-subpage h3{line-height:1.12;letter-spacing:-.025em}
 .poc-outline{display:inline-flex;align-items:center;justify-content:center;gap:24px;min-height:50px;padding:14px 22px;color:var(--poc-amber);border:1px solid var(--poc-amber);font:600 11px/1.5 var(--poc-body);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;margin-top:26px}
@@ -161,26 +144,5 @@ body.qr-page .notes{gap:24px;grid-template-columns:repeat(3,minmax(0,1fr))}
 body.qr-page .notes h2{grid-column:1/-1;margin:0}
 body.qr-page .notes p{font-size:14px;line-height:1.8}
 body.qr-page::after{content:'';display:block;height:140px;background:linear-gradient(var(--poc-deep),transparent 40%),url('/assets/mountain-horizon.png') center 72%/cover}
-body.round-two-page .intro{min-height:0;padding:62px 24px 58px;background:var(--poc-deep);color:var(--poc-paper)}
-body.round-two-page .intro h1{font:500 clamp(42px,5.5vw,76px)/1.12 var(--poc-display);max-width:850px}
-body.round-two-page .intro .eyebrow,body.round-two-page .intro .from-daniel span{color:var(--poc-amber)}
-body.round-two-page .lede{font:400 clamp(18px,1.8vw,23px)/1.6 var(--poc-soft);color:#ded6c9;margin-top:24px;max-width:760px}
-body.round-two-page .from-daniel{color:#ded6c9;margin-top:18px}
-body.round-two-page .begin{margin-top:24px;color:var(--poc-amber)}
-body.round-two-page .cover-section,body.round-two-page .feedback{padding-top:68px;padding-bottom:68px}
-body.round-two-page .cover-grid{max-width:1120px}
-body.round-two-page .section-heading{max-width:1120px;margin-bottom:38px}
-body.round-two-page .section-heading h2,body.round-two-page .thanks h2{font-size:clamp(32px,4vw,50px);line-height:1.15}
-body.round-two-page .zoom{background:#191a18e8;min-height:44px}
-body.round-two-page .feedback .step,body.round-two-page .chosen-summary strong{color:var(--poc-amber)}
-body.round-two-page .feedback .section-heading>p{color:#ded6c9}
-body.poc-vote main{max-width:1240px}
-body.poc-vote .intro{background:none;padding-top:54px;padding-bottom:40px}
-body.poc-vote .intro h1{font:500 clamp(42px,5vw,70px)/1.12 var(--poc-display)}
-body.poc-vote .intro h1 em{font-style:normal;color:var(--poc-gold)}
-body.poc-vote .privacy{color:var(--poc-muted);line-height:1.6}
-body .review-hero h1{line-height:1.08;font-size:clamp(48px,6vw,88px)}
-.review-hero{min-height:0;padding-top:64px;padding-bottom:64px;background:var(--poc-paper)}
-.jumpbar{background:var(--poc-deep)}
-@media(max-width:760px){.poc-global-nav,.site-nav,.mountain-nav{min-height:90px!important;padding:20px!important;align-items:flex-start;gap:20px}.poc-wordmark{width:115px}.poc-wordmark strong{font-size:27px}.poc-wordmark small{font-size:7px}.poc-nav-links,.round-nav,.mountain-nav nav{gap:6px 16px;max-width:220px}.poc-nav-links a,.round-nav a,.mountain-nav nav a{font-size:9px!important;padding:5px 0}.welcome-wordmark .wm-over{letter-spacing:.28em;padding-left:.28em}body.welcome-page .head{padding-top:44px}body.welcome-page .head h1.welcome-wordmark{width:min(340px,82vw);gap:12px}body.welcome-page .subtitle{max-width:520px;font-size:22px}body.welcome-page section{padding:46px 22px}body.welcome-page ol.tracks a{grid-template-columns:24px minmax(0,1fr) auto;gap:5px 10px}body.welcome-page .t-style{max-width:85px;text-align:right}body.qr-page main{padding:46px 22px;gap:34px}body.qr-page .qr-panel{padding:24px 18px}body.qr-page .notes{grid-template-columns:1fr;gap:16px}body.round-two-page .intro{padding:44px 22px}body.round-two-page .cover-section,body.round-two-page .feedback{padding:46px 22px}.poc-horizon{height:160px}}
+@media(max-width:760px){.poc-global-nav,.site-nav,.mountain-nav{min-height:90px!important;padding:20px!important;align-items:flex-start;gap:20px}.poc-wordmark{width:115px}.poc-wordmark strong{font-size:27px}.poc-wordmark small{font-size:7px}.poc-nav-links,.mountain-nav nav{gap:6px 16px;max-width:220px}.poc-nav-links a,.mountain-nav nav a{font-size:9px!important;padding:5px 0}.welcome-wordmark .wm-over{letter-spacing:.28em;padding-left:.28em}body.welcome-page .head{padding-top:44px}body.welcome-page .head h1.welcome-wordmark{width:min(340px,82vw);gap:12px}body.welcome-page .subtitle{max-width:520px;font-size:22px}body.welcome-page section{padding:46px 22px}body.welcome-page ol.tracks a{grid-template-columns:24px minmax(0,1fr) auto;gap:5px 10px}body.welcome-page .t-style{max-width:85px;text-align:right}body.qr-page main{padding:46px 22px;gap:34px}body.qr-page .qr-panel{padding:24px 18px}body.qr-page .notes{grid-template-columns:1fr;gap:16px}.poc-horizon{height:160px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}

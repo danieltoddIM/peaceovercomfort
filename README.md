@@ -1,14 +1,7 @@
-# Peace Over Comfort email signup update
-Prepared October 30, 2026. Based on the current GitHub main homepage (blob a1838d01eb0d003f25474a9b865f90b7c62187cd).
+# Peace Over Comfort signup integration
 
-## Deploy
-This is an UPDATE, not a complete replacement website. Keep all existing files and assets.
-1. Create a branch from your current main branch. If the homepage has changed since this package was prepared, compare it before replacing it.
-2. Replace the root index.html with this package's index.html.
-3. Add assets/signup.css and assets/signup.js inside your existing assets folder.
-4. Do not replace vercel.json, the existing stylesheets, images, reader extras, or QR page.
-5. Commit the three files and inspect your Vercel preview. Merge only after testing.
-No dependency installation, build configuration changes, environment variables, Redis, or private API key are required. Nothing has been pushed or deployed by this task.
+Current site source: November 13, 2026.
+Use the outer package START-HERE.txt for installation instructions.
 
 ## Copy
 Headline: A little hope for the season you’re in.
@@ -75,17 +68,6 @@ Desktop layout and 390px / 320px layouts inspected.
 Browser empty-email validation checked.
 Automated isolated tests cover payload/list/channel, optional name, empty 202 response, repeat-submit guard, malformed email, consent, honeypot, HTTP 400/401/403/422/429/500, network failure, and timeout/button recovery.
 No real subscription request was sent. Actual account/list ownership, confirmation delivery, existing flows, and post-confirmation membership still need your live test.
-
-## Improved implementation prompt
-Update my existing plain HTML, CSS, and JavaScript website at peaceovercomfort.com, hosted on Vercel. Inspect the current homepage first and preserve the existing sunrise imagery, wordmark, navigation, reader extras, and QR pages. The book is not released.
-
-Add a compact, accessible signup section in the homepage hero, before the sunrise image, with id="updates". Match the current fonts, cream background, dark brown text, and gold accent #C8963E. Use the headline "A little hope for the season you’re in." and supporting text "Get encouragement from Daniel Todd and updates as Peace Over Comfort moves toward release." Include optional first name, required email, and a "Keep me posted" button. Below the fields include a required, initially unchecked checkbox with "I agree to receive emails from Daniel Todd. Unsubscribe anytime." Add a smaller TikTok link reading "Follow along on TikTok @peaceovercomfortbook". Do not use em dashes or suggest that the book is available for purchase.
-
-Use Klaviyo's browser-only Client Subscriptions endpoint with public company ID XMvydf and only list ViqaYh. Verify and pin a supported API revision and use the documented JSON:API schema. Send email and a nonempty first_name as profile attributes; explicitly set email marketing consent to SUBSCRIBED. Do not include a private key, SMS consent, analytics scripts, cookies, or local storage.
-
-Double opt-in is configured on the list. Treat HTTP 202 as acceptance, not confirmed subscription, and do not parse its empty body. Show exactly "Check your email and tap the confirm button to finish signing up." Handle email/consent validation, a hidden honeypot, duplicate submits, disabled/loading button, network failures, timeouts, throttling, and non-JSON error responses. Keep visitor data out of console logs. Use visible labels, keyboard focus states, accessible status announcements, and a stacked mobile layout. Keep a no-JavaScript form from navigating with personal data in the URL.
-
-Create no email flows or automations and change no Klaviyo account settings. Flag that existing flows could still trigger and must be reviewed by the owner. Do not send test subscriptions without an owner-supplied test address and authorization. Do not deploy. Deliver complete replacement/new files, exact installation instructions, tests, and browser Network/Console troubleshooting. If a backend becomes necessary, explain the reason and ask before changing the architecture.
 
 ## Reference
 https://developers.klaviyo.com/en/reference/create_client_subscription
